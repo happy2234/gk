@@ -1,0 +1,11 @@
+{
+  "title": "Inventory Demand Forecasting with Uncertainty Quantification",
+  "slug": "inventory-demand-forecasting",
+  "summary": "Time-series demand forecasting with conformal prediction intervals on the M5 dataset, comparing LightGBM, XGBoost, and LSTM baselines with integrated anomaly detection.",
+  "tags": ["LightGBM", "XGBoost", "LSTM", "Conformal Prediction", "Time Series"],
+  "year": 2025,
+  "github": "https://github.com/happy2234",
+  "demo": "",
+  "status": "active",
+  "body": "## Problem\n\nInventory forecasting needs not just point predictions but calibrated uncertainty intervals to support real-world procurement decisions. Irregular demand spikes further degrade model performance if not handled.\n\n## Approach\n\nBuilt a time-series demand forecasting system with conformal prediction intervals on the M5 Forecasting dataset. Compared LightGBM, XGBoost, and LSTM baselines. Integrated anomaly detection to suppress irregular demand spikes prior to model training.\n\n## Results\n\nConformal prediction intervals provided well-calibrated coverage guarantees across all model variants. Anomaly-filtered training improved baseline accuracy across all three model types."
+}

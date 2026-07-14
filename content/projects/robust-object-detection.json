@@ -1,0 +1,11 @@
+{
+  "title": "Robust Object Detection with Uncertainty-Based Attack Detection",
+  "slug": "robust-object-detection",
+  "summary": "Object detection pipeline with Monte Carlo Dropout uncertainty estimation to flag adversarial and out-of-distribution inputs at inference time.",
+  "tags": ["PyTorch", "OpenCV", "Adversarial Robustness", "Uncertainty Estimation", "Computer Vision"],
+  "year": 2024,
+  "github": "https://github.com/happy2234",
+  "demo": "",
+  "status": "active",
+  "body": "## Problem\n\nModern object detection models are vulnerable to adversarial attacks (FGSM, PGD) that introduce imperceptible perturbations causing confident, incorrect predictions. Detecting these at inference time is critical for real-world deployment.\n\n## Approach\n\nDesigned an object detection pipeline with Monte Carlo Dropout uncertainty estimation. At inference, multiple stochastic forward passes generate a distribution of predictions — high variance signals potential adversarial or out-of-distribution inputs, triggering a flag before predictions are acted upon.\n\n## Results\n\nBenchmarked against FGSM and PGD attacks; demonstrated measurable robustness improvement over baseline models. Uncertainty thresholding correctly identified adversarial samples with high recall."
+}

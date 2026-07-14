@@ -1,0 +1,54 @@
+{
+  "bio": [
+    "I'm Gaurav Kumar, an ML Engineer and M.Tech (AI/ML) student at Manav Rachna International Institute of Research and Studies, Faridabad. My research sits at the intersection of adversarial robustness, uncertainty estimation, and computer vision — building ML pipelines that are reliable and interpretable in production settings.",
+    "I've authored 3 peer-reviewed publications in IEEE and IJRASET venues, and a book chapter published by Taylor & Francis. I've contributed to open-source projects through the Ubuntu LoCo Team and GirlScript Summer of Code.",
+    "I'm actively looking for research collaborations and ML engineering internships where I can work on production-grade systems. The best way to reach me is by email."
+  ],
+
+  "education": [
+    {
+      "period": "Aug 2025 – Present",
+      "role": "M.Tech, Computer Science Engineering (AI/ML)",
+      "org": "Manav Rachna International Institute of Research and Studies",
+      "note": "CGPA: 7.49/10 (1st Year) · Faridabad, India"
+    },
+    {
+      "period": "Aug 2021 – Jun 2025",
+      "role": "B.E., Computer Science Engineering",
+      "org": "Chandigarh University",
+      "note": "CGPA: 7.20/10 · Chandigarh, India"
+    },
+    {
+      "period": "2021",
+      "role": "Class XII (Science)",
+      "org": "Kendriya Vidyalaya No. 1, AFS, Gurgaon",
+      "note": "69.2% · First Division · CBSE"
+    },
+    {
+      "period": "2018",
+      "role": "Class X",
+      "org": "Kendriya Vidyalaya No. 1, AFS, Gurgaon",
+      "note": "60.2% · First Division · CBSE"
+    }
+  ],
+
+  "experience": [
+    {
+      "period": "2023 – 2025",
+      "role": "Open-Source Linux Contributor",
+      "org": "Ubuntu LoCo Team",
+      "note": "Resolved system-level bugs and hardware compatibility issues; contributed patches and documentation across Ubuntu releases. (Remote)"
+    },
+    {
+      "period": "Summer 2024",
+      "role": "Open-Source Contributor — Sound Scape Repository",
+      "org": "GirlScript Summer of Code",
+      "note": "Implemented feature modules for an open-source audio processing project; reviewed peer pull requests under mentorship. (Remote)"
+    }
+  ],
+
+  "skills": {
+    "Languages": ["Python"],
+    "Environment": ["Miniconda", "Linux"]
+  }
+}

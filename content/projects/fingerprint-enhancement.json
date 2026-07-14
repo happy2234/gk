@@ -1,0 +1,11 @@
+{
+  "title": "AI-Based Fingerprint Enhancement System",
+  "slug": "fingerprint-enhancement",
+  "summary": "Preprocessing pipeline using Gabor filtering and morphological operations that improved fingerprint matching accuracy by ~18% on a 500+ sample benchmark.",
+  "tags": ["Python", "OpenCV", "Image Processing", "Computer Vision"],
+  "year": 2023,
+  "github": "https://github.com/happy2234",
+  "demo": "",
+  "status": "archived",
+  "body": "## Problem\n\nLow-quality fingerprint scans reduce matching accuracy in biometric systems. Noise, blurring, and poor contrast make feature extraction unreliable.\n\n## Approach\n\nBuilt a preprocessing pipeline using Gabor filtering to enhance ridge patterns and morphological operations (erosion, dilation) to clean and binarize the fingerprint image before matching.\n\n## Results\n\nImproved matching accuracy by ~18% on a 500+ sample benchmark compared to unprocessed inputs."
+}

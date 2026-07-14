@@ -1,0 +1,8 @@
+{
+  "title": "Chapter 5: GANs and Their Implementations",
+  "authors": ["Gaurav Kumar"],
+  "venue": "Taylor & Francis",
+  "year": 2025,
+  "status": "accepted",
+  "abstract": "This chapter covers Generative Adversarial Networks (GANs) — their theoretical foundations, architectural variants, and practical implementations. Topics include the original GAN framework, training dynamics, mode collapse, and real-world applications in image synthesis, data augmentation, and beyond."
+}

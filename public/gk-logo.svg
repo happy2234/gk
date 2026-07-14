@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100" height="100" role="img" aria-label="Gaurav Kumar — GK monogram">
+  <!-- Background -->
+  <rect width="100" height="100" fill="white"/>
+
+  <!-- G -->
+  <!-- Outer arc: circle r=22 centered at (28,50) -->
+  <path
+    d="
+      M 28 28
+      A 22 22 0 1 0 28 72
+      L 28 54
+      L 40 54
+      L 40 50
+      L 24 50
+      L 24 72
+      A 22 22 0 1 1 50 50
+    "
+    fill="none"
+    stroke="#2563EB"
+    stroke-width="7"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+  />
+  <!-- G crossbar -->
+  <line x1="28" y1="50" x2="42" y2="50" stroke="#2563EB" stroke-width="7" stroke-linecap="round"/>
+
+  <!-- K -->
+  <!-- Vertical stem -->
+  <line x1="58" y1="28" x2="58" y2="72" stroke="#2563EB" stroke-width="7" stroke-linecap="round"/>
+  <!-- Upper arm -->
+  <line x1="58" y1="50" x2="76" y2="28" stroke="#2563EB" stroke-width="7" stroke-linecap="round"/>
+  <!-- Lower arm -->
+  <line x1="58" y1="50" x2="76" y2="72" stroke="#2563EB" stroke-width="7" stroke-linecap="round"/>
+</svg>

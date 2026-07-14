@@ -1,0 +1,182 @@
+@import "tailwindcss";
+
+@theme inline {
+  /* Colors */
+  --color-bg: #FFFFFF;
+  --color-text: #111827;
+  --color-text-secondary: #6B7280;
+  --color-border: #E5E7EB;
+  --color-accent: #2563EB;
+  --color-accent-hover: #1D4ED8;
+  --color-surface: #F9FAFB;
+
+  /* Dark mode */
+  --color-bg-dark: #0B0F19;
+  --color-text-dark: #F3F4F6;
+  --color-border-dark: #1F2937;
+  --color-accent-dark: #3B82F6;
+  --color-surface-dark: #111827;
+
+  /* Typography */
+  --font-sans: var(--font-inter);
+
+  /* Shadows */
+  --shadow-card: 0 1px 3px rgba(0,0,0,0.06);
+  --shadow-hover: 0 4px 12px rgba(0,0,0,0.08);
+
+  /* Transitions */
+  --transition-base: 150ms ease-out;
+}
+
+/* Base reset and defaults */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  font-family: var(--font-sans), system-ui, sans-serif;
+  font-size: 17px;
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Reduce motion for users who prefer it */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+/* Dark mode */
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: var(--color-bg-dark);
+    color: var(--color-text-dark);
+  }
+}
+
+/* Focus states */
+:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 3px;
+  border-radius: 3px;
+}
+
+/* Skip to content */
+.skip-to-content {
+  position: absolute;
+  left: -9999px;
+  top: 1rem;
+  z-index: 9999;
+  background: var(--color-accent);
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  font-weight: 600;
+  text-decoration: none;
+}
+.skip-to-content:focus {
+  left: 1rem;
+}
+
+/* Prose styles for MDX content */
+.prose {
+  max-width: 68ch;
+  color: var(--color-text);
+}
+.prose p {
+  margin-bottom: 1.25rem;
+  line-height: 1.7;
+}
+.prose h1 { font-size: 2.25rem; font-weight: 700; margin-bottom: 1.5rem; margin-top: 0; }
+.prose h2 { font-size: 1.5rem; font-weight: 600; margin-bottom: 1rem; margin-top: 2.5rem; }
+.prose h3 { font-size: 1.125rem; font-weight: 600; margin-bottom: 0.75rem; margin-top: 2rem; }
+.prose ul { list-style: disc; padding-left: 1.5rem; margin-bottom: 1.25rem; }
+.prose ol { list-style: decimal; padding-left: 1.5rem; margin-bottom: 1.25rem; }
+.prose li { margin-bottom: 0.4rem; }
+.prose a { color: var(--color-accent); text-decoration: underline; text-underline-offset: 3px; }
+.prose a:hover { color: var(--color-accent-hover); }
+.prose code {
+  font-family: var(--font-mono), monospace;
+  font-size: 0.875em;
+  background: #F3F4F6;
+  padding: 0.15em 0.35em;
+  border-radius: 4px;
+}
+.prose pre {
+  background: #111827;
+  color: #F9FAFB;
+  padding: 1.25rem;
+  border-radius: 8px;
+  overflow-x: auto;
+  margin-bottom: 1.5rem;
+}
+.prose pre code { background: none; padding: 0; }
+.prose blockquote {
+  border-left: 3px solid var(--color-border);
+  padding-left: 1.25rem;
+  color: var(--color-text-secondary);
+  margin: 1.5rem 0;
+}
+.prose hr {
+  border: none;
+  border-top: 1px solid var(--color-border);
+  margin: 2.5rem 0;
+}
+
+/* Currently dot pulse animation */
+@keyframes pulse-dot {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.4; }
+}
+.animate-pulse-dot {
+  animation: pulse-dot 2s ease-in-out infinite;
+}
+
+/* Fade-in animation */
+@keyframes fade-in {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.animate-fade-in {
+  animation: fade-in 400ms ease-out both;
+}
+
+/* Button variants — defined here so Tailwind JIT never misses them */
+.btn-primary {
+  background-color: #2563EB;
+  color: #ffffff;
+  border: 1px solid #2563EB;
+}
+.btn-primary:hover {
+  background-color: #1D4ED8;
+  border-color: #1D4ED8;
+}
+.btn-secondary {
+  background-color: #ffffff;
+  color: #111827;
+  border: 1px solid #E5E7EB;
+}
+.btn-secondary:hover {
+  background-color: #F9FAFB;
+}
+.btn-ghost {
+  background-color: transparent;
+  color: #2563EB;
+  border: 1px solid transparent;
+}
+.btn-ghost:hover {
+  background-color: #EFF6FF;
+}

@@ -1,0 +1,93 @@
+{
+  "summary": "ML Engineer with hands-on experience in adversarial robustness, computer vision, and NLP systems. Pursuing M.Tech in AI/ML with a focus on uncertainty estimation and model reliability. Author of 3 IEEE/IJRASET peer-reviewed publications and 1 Taylor & Francis book chapter. Passionate about building production-grade ML pipelines for real-world problems.",
+
+  "experience": [
+    {
+      "role": "Open-Source Linux Contributor",
+      "org": "Ubuntu LoCo Team",
+      "period": "2023 – 2025",
+      "points": [
+        "Resolved system-level bugs and hardware compatibility issues across Ubuntu releases.",
+        "Contributed patches and documentation; coordinated with upstream maintainers."
+      ]
+    },
+    {
+      "role": "Open-Source Contributor — Sound Scape Repository",
+      "org": "GirlScript Summer of Code",
+      "period": "Summer 2024",
+      "points": [
+        "Implemented feature modules for an open-source audio processing project.",
+        "Reviewed peer pull requests under mentorship."
+      ]
+    }
+  ],
+
+  "education": [
+    {
+      "degree": "M.Tech, Computer Science Engineering (AI/ML)",
+      "org": "Manav Rachna International Institute of Research and Studies",
+      "year": "Aug 2025 – Present",
+      "detail": "CGPA: 7.49/10 (1st Year) · Faridabad, India"
+    },
+    {
+      "degree": "B.E., Computer Science Engineering",
+      "org": "Chandigarh University",
+      "year": "Aug 2021 – Jun 2025",
+      "detail": "CGPA: 7.20/10 · Chandigarh, India"
+    },
+    {
+      "degree": "Class XII (Science)",
+      "org": "Kendriya Vidyalaya No. 1, AFS, Gurgaon",
+      "year": "2021",
+      "detail": "69.2% · First Division · CBSE"
+    },
+    {
+      "degree": "Class X",
+      "org": "Kendriya Vidyalaya No. 1, AFS, Gurgaon",
+      "year": "2018",
+      "detail": "60.2% · First Division · CBSE"
+    }
+  ],
+
+  "skills": {
+    "Languages": ["Python"],
+    "Environment": ["Miniconda", "Linux"]
+  },
+
+  "certifications": [
+    {
+      "name": "Deep Learning & Reinforcement Learning",
+      "issuer": "IBM (Coursera)"
+    },
+    {
+      "name": "Automate Cybersecurity Tasks with Python",
+      "issuer": "Google (Coursera)"
+    }
+  ],
+
+  "currentlyUsing": [
+    {
+      "category": "Languages",
+      "items": ["Python"]
+    },
+    {
+      "category": "Environment",
+      "items": ["Miniconda", "Linux (Ubuntu 26.04 LTS)"]
+    }
+  ],
+
+  "openSource": [
+    {
+      "role": "Open-Source Linux Contributor",
+      "org": "Ubuntu LoCo Team",
+      "period": "2023 – 2025",
+      "description": "Resolved system-level bugs and hardware compatibility issues; contributed patches and documentation across Ubuntu releases. (Remote)"
+    },
+    {
+      "role": "Open-Source Contributor — Sound Scape Repository",
+      "org": "GirlScript Summer of Code",
+      "period": "Summer 2024",
+      "description": "Implemented feature modules for an open-source audio processing project; reviewed peer pull requests under mentorship. (Remote)"
+    }
+  ]
+}

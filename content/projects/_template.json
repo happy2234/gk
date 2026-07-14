@@ -1,0 +1,11 @@
+{
+  "title": "_TEMPLATE — Copy and rename this file",
+  "slug": "your-project-slug",
+  "summary": "One sentence summary of what this project does.",
+  "tags": ["Python", "ML"],
+  "year": 2026,
+  "github": "https://github.com/gaurav/your-repo",
+  "demo": "",
+  "status": "active",
+  "body": "## Problem\n\nWhat problem does this solve?\n\n## Approach\n\nHow did you approach it?\n\n## Results\n\nWhat did you achieve?"
+}

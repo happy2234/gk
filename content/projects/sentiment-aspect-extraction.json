@@ -1,0 +1,11 @@
+{
+  "title": "Customer Review Sentiment & Aspect Extraction Pipeline",
+  "slug": "sentiment-aspect-extraction",
+  "summary": "Fine-tuned BERT for aspect-level sentiment analysis on Amazon reviews, extracting structured (aspect, opinion, sentiment) triplets with MLflow experiment tracking.",
+  "tags": ["BERT", "HuggingFace", "MLflow", "NLP", "Sentiment Analysis"],
+  "year": 2025,
+  "github": "https://github.com/happy2234",
+  "demo": "",
+  "status": "active",
+  "body": "## Problem\n\nUnstructured customer reviews contain valuable but hard-to-extract signals: not just overall sentiment but which specific product aspects (battery, screen, price) are praised or criticised.\n\n## Approach\n\nFine-tuned BERT for aspect-level sentiment analysis on Amazon product reviews. The pipeline extracts structured (aspect, opinion, sentiment) triplets across 8 product categories. End-to-end preprocessing, training, and evaluation is automated with MLflow experiment tracking for reproducibility.\n\n## Results\n\nSuccessfully extracted structured triplets across 8 product categories. MLflow tracking enabled systematic comparison of fine-tuning configurations and hyperparameters."
+}

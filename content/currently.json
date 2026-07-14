@@ -1,0 +1,30 @@
+{
+  "items": [
+    {
+      "title": "MTech Thesis — Adversarial Robustness & Uncertainty Estimation in Object Detection",
+      "type": "paper",
+      "status": "active",
+      "note": "Exploring Monte Carlo Dropout and conformal prediction for flagging adversarial/OOD inputs in real-time detection pipelines."
+    },
+    {
+      "title": "Inventory Demand Forecasting with Uncertainty Quantification",
+      "type": "project",
+      "status": "active",
+      "note": "Extending conformal prediction intervals and anomaly detection on M5 dataset. LightGBM vs XGBoost vs LSTM comparison.",
+      "link": "https://github.com/happy2234"
+    },
+    {
+      "title": "M.Tech CSE (AI/ML) — Manav Rachna",
+      "type": "coursework",
+      "status": "active",
+      "note": "Semester 2 — covering advanced deep learning, probabilistic ML, and research methodology."
+    },
+    {
+      "title": "Read 12 technical papers this semester",
+      "type": "goal",
+      "status": "active",
+      "note": "Progress: 4 / 12 — current focus: uncertainty quantification in neural networks."
+    }
+  ],
+  "updatedAt": "2026-07-14"
+}

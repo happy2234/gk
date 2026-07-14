@@ -1,0 +1,10 @@
+{
+  "title": "Exploring ApexWolf: A Study of a Cryptocurrency Exchange Website",
+  "authors": ["Gaurav Kumar"],
+  "venue": "IEEE INNOCOMP 2024",
+  "year": 2024,
+  "status": "published",
+  "pdfLink": "https://ieeexplore.ieee.org/document/10664090",
+  "doi": "10.1109/INNOCOMP63224.2024.00019",
+  "abstract": "An analytical study of the ApexWolf cryptocurrency exchange platform, examining its architecture, security posture, and design patterns as a case study in modern fintech web application development."
+}

@@ -1,0 +1,13 @@
+{
+  "title": "_TEMPLATE — Copy and rename this file",
+  "authors": ["Gaurav", "Co-author Name"],
+  "venue": "Conference or Journal Name",
+  "year": 2026,
+  "status": "in-prep",
+  "pdfLink": "",
+  "arxivLink": "",
+  "codeLink": "",
+  "doi": "",
+  "abstract": "One paragraph abstract.",
+  "bibtex": "@article{gaurav2026template,\n  title={Paper Title},\n  author={Gaurav and Co-author},\n  journal={Venue},\n  year={2026}\n}"
+}

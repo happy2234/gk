@@ -1,0 +1,44 @@
+{
+  "name": "Gaurav Kumar",
+  "tagline": "ML Engineer & AI/ML Researcher",
+  "location": "Gurugram, Haryana, India",
+  "phone": "+91 96435 54603",
+  "email": "gauravjangra1110@gmail.com",
+  "socialLinks": [
+    {
+      "id": "email",
+      "label": "Email",
+      "value": "gauravjangra1110@gmail.com",
+      "href": "mailto:gauravjangra1110@gmail.com",
+      "external": false
+    },
+    {
+      "id": "github",
+      "label": "GitHub",
+      "value": "github.com/happy2234",
+      "href": "https://github.com/happy2234",
+      "external": true
+    },
+    {
+      "id": "linkedin",
+      "label": "LinkedIn",
+      "value": "linkedin.com/in/gaurav-kumar-5bb707256",
+      "href": "https://www.linkedin.com/in/gaurav-kumar-5bb707256/",
+      "external": true
+    },
+    {
+      "id": "scholar",
+      "label": "Google Scholar",
+      "value": "Gaurav Kumar — 3 publications",
+      "href": "https://scholar.google.com/citations?user=YEjNYdMAAAAJ&hl=en",
+      "external": true
+    },
+    {
+      "id": "x",
+      "label": "X",
+      "value": "@GAURAVK1959744",
+      "href": "https://x.com/GAURAVK1959744",
+      "external": true
+    }
+  ]
+}

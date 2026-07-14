@@ -1,0 +1,10 @@
+{
+  "title": "Securing IoT-Enabled Web Applications and Enhancing Women's Safety Through Advanced Technologies",
+  "authors": ["Gaurav Kumar"],
+  "venue": "IEEE ISCS 2024",
+  "year": 2024,
+  "status": "published",
+  "pdfLink": "https://ieeexplore.ieee.org/abstract/document/10581319",
+  "doi": "10.1109/ISCS61804.2024.10581319",
+  "abstract": "This paper explores advanced security mechanisms for IoT-enabled web applications with a focus on safety-critical applications, including women's safety systems. The work examines authentication, encryption, and threat-detection strategies applicable to resource-constrained IoT environments."
+}

@@ -1,0 +1,18 @@
+{
+  "statement": "My research focuses on making deep learning models more reliable in open-world conditions — specifically under adversarial perturbations and distribution shift. I work at the intersection of uncertainty estimation, adversarial robustness, and computer vision, with the goal of building ML systems that know what they don't know.\n\nCurrently, I am exploring Monte Carlo Dropout and conformal prediction as post-hoc uncertainty quantification methods for object detection pipelines. The core question: can we flag adversarial or out-of-distribution inputs in real-time without retraining the detector?\n\nLonger term, I am interested in calibration under distribution shift, reliable uncertainty propagation in multi-stage pipelines, and applications of these methods to safety-critical systems.",
+
+  "interests": [
+    {
+      "area": "Adversarial Robustness",
+      "description": "Studying how neural networks fail under adversarial perturbations and developing detection and mitigation strategies for object detection pipelines."
+    },
+    {
+      "area": "Uncertainty Estimation",
+      "description": "Applying conformal prediction and Monte Carlo Dropout to quantify predictive uncertainty in deep learning models, with a focus on out-of-distribution detection."
+    },
+    {
+      "area": "Computer Vision",
+      "description": "Building and evaluating object detection and image classification systems, with an emphasis on robustness and calibration in real-world deployment settings."
+    }
+  ]
+}
