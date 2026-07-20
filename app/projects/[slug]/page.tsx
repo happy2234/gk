@@ -54,7 +54,7 @@ export default async function ProjectDetailPage({ params }: Props) {
       <nav aria-label="Breadcrumb" className="mb-8">
         <Link
           href="/projects"
-          className="text-[14px] text-[#6B7280] hover:text-[#111827] transition-colors duration-150"
+          className="text-[14px] text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-100 transition-colors duration-150"
         >
           ← Projects
         </Link>
@@ -63,7 +63,7 @@ export default async function ProjectDetailPage({ params }: Props) {
       <div className="mb-10">
         <div className="flex items-start gap-3 mb-3">
           <h1
-            className="text-[2rem] font-bold text-[#111827] leading-tight flex-1"
+            className="text-[2rem] font-bold text-gray-900 dark:text-gray-100 leading-tight flex-1"
             style={{ letterSpacing: "-0.01em" }}
           >
             {project.title}
@@ -74,7 +74,7 @@ export default async function ProjectDetailPage({ params }: Props) {
             status={project.status === "active" ? "active" : "archived"}
           />
         </div>
-        <p className="text-[16px] text-[#6B7280] leading-relaxed mb-4">
+        <p className="text-[16px] text-gray-500 dark:text-gray-400 leading-relaxed mb-4">
           {project.summary}
         </p>
         <div className="flex flex-wrap gap-1.5 mb-5">
@@ -87,7 +87,7 @@ export default async function ProjectDetailPage({ params }: Props) {
             <ExternalLink
               href={project.github}
               id={`github-${project.slug}`}
-              className="text-[13px] font-medium text-[#6B7280] hover:text-[#111827] border border-[#E5E7EB] px-3 py-1.5 rounded-[6px] gap-1.5 hover:border-[#D1D5DB] transition-all duration-150"
+              className="text-[13px] font-medium text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-100 border border-gray-200 hover:border-gray-300 dark:border-gray-800 dark:hover:border-gray-700 px-3 py-1.5 rounded-[6px] gap-1.5 transition-all duration-150"
               aria-label={`GitHub: ${project.title}`}
             >
               <GithubIcon />
@@ -98,7 +98,7 @@ export default async function ProjectDetailPage({ params }: Props) {
             <ExternalLink
               href={project.demo}
               id={`demo-${project.slug}`}
-              className="text-[13px] font-medium text-white bg-[#2563EB] hover:bg-[#1D4ED8] px-3 py-1.5 rounded-[6px] gap-1.5 transition-all duration-150"
+              className="text-[13px] font-medium text-white bg-blue-600 hover:bg-blue-700 dark:bg-blue-500 dark:hover:bg-blue-600 px-3 py-1.5 rounded-[6px] gap-1.5 transition-all duration-150"
               aria-label={`Demo: ${project.title}`}
             >
               Live Demo

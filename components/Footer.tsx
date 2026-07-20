@@ -48,9 +48,9 @@ export default function Footer() {
   const year = new Date().getFullYear();
 
   return (
-    <footer className="border-t border-[#E5E7EB] mt-24">
+    <footer className="border-t border-gray-200 dark:border-gray-800 mt-24 transition-colors duration-200">
       <div className="max-w-4xl mx-auto px-6 py-8 flex flex-col sm:flex-row items-center justify-between gap-4">
-        <p className="text-[13px] text-[#9CA3AF] m-0">
+        <p className="text-[13px] text-gray-500 dark:text-gray-400 m-0">
           © {year} Gaurav
         </p>
 
@@ -63,7 +63,7 @@ export default function Footer() {
                   target={external ? "_blank" : undefined}
                   rel={external ? "noopener noreferrer" : undefined}
                   aria-label={label}
-                  className="text-[#9CA3AF] hover:text-[#111827] transition-colors duration-150 flex items-center"
+                  className="text-gray-400 hover:text-gray-900 dark:text-gray-500 dark:hover:text-gray-100 transition-colors duration-150 flex items-center"
                 >
                   <FooterIcon id={id} />
                 </a>
@@ -71,18 +71,36 @@ export default function Footer() {
             ))}
 
             {/* Divider */}
-            <li aria-hidden="true" className="w-px h-4 bg-[#E5E7EB]" />
+            <li aria-hidden="true" className="w-px h-4 bg-gray-200 dark:bg-gray-800" />
 
             <li>
               <Link
                 href="/contact"
-                className="text-[13px] text-[#9CA3AF] hover:text-[#111827] transition-colors duration-150"
+                className="text-[13px] text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-100 transition-colors duration-150"
               >
                 Contact
               </Link>
             </li>
           </ul>
         </nav>
+        
+        {/* Visit Counter */}
+        <div className="flex-shrink-0 opacity-70 hover:opacity-100 transition-opacity duration-200 hidden sm:block ml-4">
+          <img 
+            src="https://visitor-badge.laobi.icu/badge?page_id=gaurav.kumar.portfolio&left_color=%23111827&right_color=%232563EB" 
+            alt="Visitor counter" 
+            className="h-5 rounded-sm"
+          />
+        </div>
+      </div>
+      
+      {/* Mobile Visit Counter */}
+      <div className="sm:hidden flex justify-center pb-8 opacity-70 hover:opacity-100 transition-opacity duration-200">
+        <img 
+          src="https://visitor-badge.laobi.icu/badge?page_id=gaurav.kumar.portfolio&left_color=%23111827&right_color=%232563EB" 
+          alt="Visitor counter" 
+          className="h-5 rounded-sm"
+        />
       </div>
     </footer>
   );

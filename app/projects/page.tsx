@@ -17,12 +17,12 @@ export default function ProjectsPage() {
   return (
     <div className="max-w-4xl mx-auto px-6 py-16 animate-fade-in">
       <h1
-        className="text-[2.5rem] font-bold text-[#111827] leading-tight mb-3"
+        className="text-[2.5rem] font-bold text-gray-900 dark:text-gray-100 leading-tight mb-3"
         style={{ letterSpacing: "-0.02em" }}
       >
         Projects
       </h1>
-      <p className="text-[17px] text-[#6B7280] mb-12 max-w-[60ch] leading-relaxed">
+      <p className="text-[17px] text-gray-500 dark:text-gray-400 mb-12 max-w-[60ch] leading-relaxed">
         Research prototypes, open-source tools, and engineering projects.
       </p>
 

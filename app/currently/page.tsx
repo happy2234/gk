@@ -14,27 +14,27 @@ export const metadata: Metadata = {
 
 const TYPE_META: Record<
   CurrentlyItem["type"],
-  { label: string; color: string; bg: string }
+  { label: string; colorClass: string; bgClass: string }
 > = {
   paper: {
     label: "Paper",
-    color: "#7C3AED",
-    bg: "#EDE9FE",
+    colorClass: "text-purple-700 dark:text-purple-400",
+    bgClass: "bg-purple-100 dark:bg-purple-900/30",
   },
   project: {
     label: "Project",
-    color: "#2563EB",
-    bg: "#DBEAFE",
+    colorClass: "text-blue-600 dark:text-blue-400",
+    bgClass: "bg-blue-100 dark:bg-blue-900/30",
   },
   coursework: {
     label: "Coursework",
-    color: "#059669",
-    bg: "#D1FAE5",
+    colorClass: "text-green-600 dark:text-green-400",
+    bgClass: "bg-green-100 dark:bg-green-900/30",
   },
   goal: {
     label: "Goal",
-    color: "#D97706",
-    bg: "#FEF3C7",
+    colorClass: "text-amber-600 dark:text-amber-400",
+    bgClass: "bg-amber-100 dark:bg-amber-900/30",
   },
 };
 
@@ -42,8 +42,8 @@ const STATUS_META: Record<
   CurrentlyItem["status"],
   { label: string; dotClass: string }
 > = {
-  active: { label: "Active", dotClass: "bg-[#2563EB] animate-pulse-dot" },
-  paused: { label: "Paused", dotClass: "bg-[#D1D5DB]" },
+  active: { label: "Active", dotClass: "bg-blue-600 dark:bg-blue-500 animate-pulse-dot" },
+  paused: { label: "Paused", dotClass: "bg-gray-300 dark:bg-gray-600" },
 };
 
 function daysSince(dateStr: string): number {
@@ -68,8 +68,7 @@ function CurrentlyItemCard({ item }: { item: CurrentlyItem }) {
 
   return (
     <div
-      className="border border-[#E5E7EB] rounded-[10px] p-5 hover:border-[#D1D5DB] hover:shadow-[0_4px_12px_rgba(0,0,0,0.06)] transition-all duration-200"
-      style={{ background: "#FAFAFA" }}
+      className="border border-gray-200 dark:border-gray-800 bg-gray-50 dark:bg-gray-900/50 rounded-[10px] p-5 hover:border-gray-300 dark:hover:border-gray-700 hover:shadow-md dark:hover:shadow-gray-800/50 transition-all duration-200"
     >
       <div className="flex items-start gap-3">
         {/* Status dot */}
@@ -86,13 +85,13 @@ function CurrentlyItemCard({ item }: { item: CurrentlyItem }) {
                 href={item.link}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-[15px] font-medium text-[#111827] hover:text-[#2563EB] transition-colors duration-150 underline underline-offset-2 decoration-[#E5E7EB] hover:decoration-[#2563EB] leading-snug"
+                className="text-[15px] font-medium text-gray-900 dark:text-gray-100 hover:text-blue-600 dark:hover:text-blue-400 transition-colors duration-150 underline underline-offset-2 decoration-gray-200 dark:decoration-gray-700 hover:decoration-blue-600 dark:hover:decoration-blue-400 leading-snug"
               >
                 {item.title}
                 <span className="inline-block ml-1 opacity-50" aria-hidden="true">↗</span>
               </a>
             ) : (
-              <span className="text-[15px] font-medium text-[#111827] leading-snug">
+              <span className="text-[15px] font-medium text-gray-900 dark:text-gray-100 leading-snug">
                 {item.title}
               </span>
             )}
@@ -100,7 +99,7 @@ function CurrentlyItemCard({ item }: { item: CurrentlyItem }) {
 
           {/* Note */}
           {item.note && (
-            <p className="text-[13px] text-[#6B7280] m-0 mt-1 leading-relaxed">
+            <p className="text-[13px] text-gray-500 dark:text-gray-400 m-0 mt-1 leading-relaxed">
               {item.note}
             </p>
           )}
@@ -109,8 +108,7 @@ function CurrentlyItemCard({ item }: { item: CurrentlyItem }) {
           <div className="flex items-center gap-2 mt-3">
             {/* Type badge */}
             <span
-              className="text-[11px] font-semibold uppercase tracking-wider px-2 py-0.5 rounded-full"
-              style={{ color: type.color, backgroundColor: type.bg }}
+              className={`text-[11px] font-semibold uppercase tracking-wider px-2 py-0.5 rounded-full ${type.colorClass} ${type.bgClass}`}
             >
               {type.label}
             </span>
@@ -119,8 +117,8 @@ function CurrentlyItemCard({ item }: { item: CurrentlyItem }) {
             <span
               className={`text-[11px] font-medium px-2 py-0.5 rounded-full ${
                 item.status === "active"
-                  ? "text-[#2563EB] bg-[#DBEAFE]"
-                  : "text-[#6B7280] bg-[#F3F4F6]"
+                  ? "text-blue-600 dark:text-blue-400 bg-blue-100 dark:bg-blue-900/30"
+                  : "text-gray-500 dark:text-gray-400 bg-gray-100 dark:bg-gray-800"
               }`}
             >
               {status.label}
@@ -168,8 +166,8 @@ export default function CurrentlyPage() {
           <span
             className={`w-2.5 h-2.5 rounded-full flex-shrink-0 ${
               items.some((i) => i.status === "active")
-                ? "bg-[#2563EB] animate-pulse-dot"
-                : "bg-[#D1D5DB]"
+                ? "bg-blue-600 dark:bg-blue-500 animate-pulse-dot"
+                : "bg-gray-300 dark:bg-gray-600"
             }`}
             aria-hidden="true"
           />
@@ -183,7 +181,7 @@ export default function CurrentlyPage() {
         {/* Updated timestamp */}
         <p
           className={`text-[13px] mt-2 ${
-            isStale ? "text-[#EF4444]" : "text-[#9CA3AF]"
+            isStale ? "text-red-500" : "text-gray-400 dark:text-gray-500"
           }`}
         >
           {isStale ? "⚠ " : ""}Last updated: {formatDate(updatedAt)}
@@ -193,10 +191,10 @@ export default function CurrentlyPage() {
 
       {/* Content */}
       {!hasItems ? (
-        <div className="text-center py-20 border border-dashed border-[#E5E7EB] rounded-[12px]">
-          <p className="text-[15px] text-[#6B7280]">
+        <div className="text-center py-20 border border-dashed border-gray-200 dark:border-gray-800 rounded-[12px]">
+          <p className="text-[15px] text-gray-500 dark:text-gray-400">
             Nothing listed yet. Edit{" "}
-            <code className="text-[13px] bg-[#F3F4F6] px-1.5 py-0.5 rounded">
+            <code className="text-[13px] bg-gray-100 dark:bg-gray-800 px-1.5 py-0.5 rounded">
               content/currently.json
             </code>{" "}
             to add items.
@@ -212,8 +210,7 @@ export default function CurrentlyPage() {
             return (
               <section key={type} aria-label={`${meta.label} items`}>
                 <h2
-                  className="text-[11px] font-semibold uppercase tracking-widest mb-4"
-                  style={{ color: meta.color }}
+                  className={`text-[11px] font-semibold uppercase tracking-widest mb-4 ${meta.colorClass}`}
                 >
                   {meta.label}
                 </h2>
@@ -229,21 +226,21 @@ export default function CurrentlyPage() {
       )}
 
       {/* Footer hint */}
-      <div className="mt-16 pt-8 border-t border-[#E5E7EB]">
-        <p className="text-[13px] text-[#9CA3AF]">
+      <div className="mt-16 pt-8 border-t border-gray-200 dark:border-gray-800">
+        <p className="text-[13px] text-gray-400 dark:text-gray-500">
           Inspired by{" "}
           <a
             href="https://nownownow.com/about"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-[#6B7280] hover:text-[#2563EB] transition-colors duration-150 underline underline-offset-2"
+            className="text-gray-500 hover:text-blue-600 dark:text-gray-400 dark:hover:text-blue-400 transition-colors duration-150 underline underline-offset-2"
           >
             /now pages
           </a>
           . ·{" "}
           <Link
             href="/"
-            className="text-[#6B7280] hover:text-[#2563EB] transition-colors duration-150"
+            className="text-gray-500 hover:text-blue-600 dark:text-gray-400 dark:hover:text-blue-400 transition-colors duration-150"
           >
             ← Back home
           </Link>

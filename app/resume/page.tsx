@@ -59,7 +59,7 @@ export default function ResumePage() {
       {/* Header */}
       <div className="flex items-center justify-between mb-12">
         <h1
-          className="text-[2.5rem] font-bold text-[#111827] leading-tight"
+          className="text-[2.5rem] font-bold text-gray-900 dark:text-gray-100 leading-tight"
           style={{ letterSpacing: "-0.02em" }}
         >
           Resume
@@ -75,11 +75,11 @@ export default function ResumePage() {
       </div>
 
       {/* Contact header */}
-      <div className="mb-10 pb-8 border-b border-[#E5E7EB]">
-        <p className="text-[22px] font-semibold text-[#111827] mb-1">
+      <div className="mb-10 pb-8 border-b border-gray-200 dark:border-gray-800">
+        <p className="text-[22px] font-semibold text-gray-900 dark:text-gray-100 mb-1">
           {site.name}
         </p>
-        <p className="text-[14px] text-[#6B7280] m-0 mb-1">
+        <p className="text-[14px] text-gray-500 dark:text-gray-400 m-0 mb-1">
           {site.location} · {site.phone}
         </p>
         <div className="flex items-center gap-3 mt-2">
@@ -91,7 +91,7 @@ export default function ResumePage() {
               rel={external ? "noopener noreferrer" : undefined}
               aria-label={label}
               title={label}
-              className="text-[#9CA3AF] hover:text-[#2563EB] transition-colors duration-150 flex items-center"
+              className="text-gray-400 dark:text-gray-500 hover:text-blue-600 dark:text-blue-400 transition-colors duration-150 flex items-center"
             >
               <ResumeIcon id={id} />
             </a>
@@ -101,17 +101,17 @@ export default function ResumePage() {
 
       {/* Summary */}
       <section className="mb-10" aria-label="Summary">
-        <h2 className="text-[11px] font-semibold text-[#6B7280] uppercase tracking-widest mb-4">
+        <h2 className="text-[11px] font-semibold text-gray-500 dark:text-gray-400 uppercase tracking-widest mb-4">
           Summary
         </h2>
-        <p className="text-[15px] text-[#374151] leading-relaxed max-w-[72ch]">
+        <p className="text-[15px] text-gray-700 dark:text-gray-300 leading-relaxed max-w-[72ch]">
           {resume.summary}
         </p>
       </section>
 
       {/* Experience */}
       <section className="mb-10" aria-label="Work experience">
-        <h2 className="text-[11px] font-semibold text-[#6B7280] uppercase tracking-widest mb-5">
+        <h2 className="text-[11px] font-semibold text-gray-500 dark:text-gray-400 uppercase tracking-widest mb-5">
           Experience
         </h2>
         <div className="flex flex-col gap-7">
@@ -119,14 +119,14 @@ export default function ResumePage() {
             <div key={item.role}>
               <div className="flex items-baseline justify-between mb-1 flex-wrap gap-2">
                 <div>
-                  <span className="text-[15px] font-semibold text-[#111827]">
+                  <span className="text-[15px] font-semibold text-gray-900 dark:text-gray-100">
                     {item.role}
                   </span>
-                  <span className="text-[14px] text-[#6B7280] ml-2">
+                  <span className="text-[14px] text-gray-500 dark:text-gray-400 ml-2">
                     {item.org}
                   </span>
                 </div>
-                <span className="text-[13px] text-[#9CA3AF] flex-shrink-0">
+                <span className="text-[13px] text-gray-400 dark:text-gray-500 flex-shrink-0">
                   {item.period}
                 </span>
               </div>
@@ -134,7 +134,7 @@ export default function ResumePage() {
                 {item.points.map((pt) => (
                   <li
                     key={pt}
-                    className="text-[14px] text-[#374151] leading-relaxed"
+                    className="text-[14px] text-gray-700 dark:text-gray-300 leading-relaxed"
                   >
                     {pt}
                   </li>
@@ -147,7 +147,7 @@ export default function ResumePage() {
 
       {/* Education */}
       <section className="mb-10" aria-label="Education">
-        <h2 className="text-[11px] font-semibold text-[#6B7280] uppercase tracking-widest mb-5">
+        <h2 className="text-[11px] font-semibold text-gray-500 dark:text-gray-400 uppercase tracking-widest mb-5">
           Education
         </h2>
         <div className="flex flex-col gap-4">
@@ -155,18 +155,18 @@ export default function ResumePage() {
             <div key={item.degree}>
               <div className="flex items-baseline justify-between flex-wrap gap-2">
                 <div>
-                  <span className="text-[14px] font-semibold text-[#111827]">
+                  <span className="text-[14px] font-semibold text-gray-900 dark:text-gray-100">
                     {item.degree}
                   </span>
-                  <span className="text-[13px] text-[#6B7280] ml-2">
+                  <span className="text-[13px] text-gray-500 dark:text-gray-400 ml-2">
                     {item.org}
                   </span>
                 </div>
-                <span className="text-[13px] text-[#9CA3AF] flex-shrink-0">
+                <span className="text-[13px] text-gray-400 dark:text-gray-500 flex-shrink-0">
                   {item.year}
                 </span>
               </div>
-              <p className="text-[13px] text-[#9CA3AF] mt-0.5 ml-0">
+              <p className="text-[13px] text-gray-400 dark:text-gray-500 mt-0.5 ml-0">
                 {item.detail}
               </p>
             </div>
@@ -176,16 +176,16 @@ export default function ResumePage() {
 
       {/* Skills */}
       <section className="mb-10" aria-label="Skills">
-        <h2 className="text-[11px] font-semibold text-[#6B7280] uppercase tracking-widest mb-5">
+        <h2 className="text-[11px] font-semibold text-gray-500 dark:text-gray-400 uppercase tracking-widest mb-5">
           Skills
         </h2>
         <div className="flex flex-col gap-2">
           {Object.entries(resume.skills).map(([category, items]) => (
             <div key={category} className="flex gap-3 text-[14px]">
-              <span className="text-[#6B7280] w-28 flex-shrink-0">
+              <span className="text-gray-500 dark:text-gray-400 w-28 flex-shrink-0">
                 {category}
               </span>
-              <span className="text-[#374151]">{items.join(", ")}</span>
+              <span className="text-gray-700 dark:text-gray-300">{items.join(", ")}</span>
             </div>
           ))}
         </div>
@@ -193,14 +193,14 @@ export default function ResumePage() {
 
       {/* Certifications */}
       <section aria-label="Certifications">
-        <h2 className="text-[11px] font-semibold text-[#6B7280] uppercase tracking-widest mb-5">
+        <h2 className="text-[11px] font-semibold text-gray-500 dark:text-gray-400 uppercase tracking-widest mb-5">
           Certifications
         </h2>
         <div className="flex flex-col gap-2">
           {resume.certifications.map((cert) => (
             <div key={cert.name} className="flex gap-3 text-[14px]">
-              <span className="text-[#374151] font-medium">{cert.name}</span>
-              <span className="text-[#9CA3AF]">— {cert.issuer}</span>
+              <span className="text-gray-700 dark:text-gray-300 font-medium">{cert.name}</span>
+              <span className="text-gray-400 dark:text-gray-500">— {cert.issuer}</span>
             </div>
           ))}
         </div>

@@ -56,12 +56,12 @@ export default function ContactPage() {
   return (
     <div className="max-w-4xl mx-auto px-6 py-16 animate-fade-in">
       <h1
-        className="text-[2.5rem] font-bold text-[#111827] leading-tight mb-4"
+        className="text-[2.5rem] font-bold text-gray-900 dark:text-gray-100 leading-tight mb-4"
         style={{ letterSpacing: "-0.02em" }}
       >
         Contact
       </h1>
-      <p className="text-[17px] text-[#6B7280] max-w-[55ch] leading-relaxed mb-12">
+      <p className="text-[17px] text-gray-500 dark:text-gray-400 max-w-[55ch] leading-relaxed mb-12">
         Best for research collaborations, PhD program questions, or open-source
         projects. Email is the most reliable way to reach me.
       </p>
@@ -74,21 +74,21 @@ export default function ContactPage() {
             href={href}
             target={external ? "_blank" : undefined}
             rel={external ? "noopener noreferrer" : undefined}
-            className="flex items-center gap-4 py-4 border-b border-[#E5E7EB] group transition-colors duration-150 no-underline"
+            className="flex items-center gap-4 py-4 border-b border-gray-200 dark:border-gray-800 group transition-colors duration-150 no-underline"
           >
-            <span className="text-[#9CA3AF] group-hover:text-[#2563EB] transition-colors duration-150 flex-shrink-0">
+            <span className="text-gray-400 dark:text-gray-500 group-hover:text-blue-600 dark:text-blue-400 transition-colors duration-150 flex-shrink-0">
               <IconForId id={id} />
             </span>
             <div className="flex-1 min-w-0">
-              <p className="text-[11px] text-[#9CA3AF] m-0 uppercase tracking-widest font-medium leading-none mb-0.5">
+              <p className="text-[11px] text-gray-400 dark:text-gray-500 m-0 uppercase tracking-widest font-medium leading-none mb-0.5">
                 {label}
               </p>
-              <p className="text-[14px] text-[#111827] group-hover:text-[#2563EB] transition-colors duration-150 m-0 font-medium leading-snug truncate">
+              <p className="text-[14px] text-gray-900 dark:text-gray-100 group-hover:text-blue-600 dark:text-blue-400 transition-colors duration-150 m-0 font-medium leading-snug truncate">
                 {value}
               </p>
             </div>
             {external && (
-              <span className="text-[#D1D5DB] group-hover:text-[#2563EB] transition-colors duration-150 flex-shrink-0 text-[13px]">
+              <span className="text-[#D1D5DB] group-hover:text-blue-600 dark:text-blue-400 transition-colors duration-150 flex-shrink-0 text-[13px]">
                 ↗
               </span>
             )}
@@ -96,7 +96,7 @@ export default function ContactPage() {
         ))}
       </div>
 
-      <p className="mt-10 text-[13px] text-[#9CA3AF] max-w-[50ch] leading-relaxed">
+      <p className="mt-10 text-[13px] text-gray-400 dark:text-gray-500 max-w-[50ch] leading-relaxed">
         No contact form — keeps maintenance surface minimal.
       </p>
     </div>

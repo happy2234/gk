@@ -45,12 +45,12 @@ export default function HomePage() {
                 alt="Gaurav Kumar"
                 width={96}
                 height={96}
-                className="rounded-full object-cover border-2 border-[#E5E7EB] shadow-sm"
+                className="rounded-full object-cover border-2 border-gray-200 dark:border-gray-800 shadow-sm"
                 priority
               />
             ) : (
               <div
-                className="w-24 h-24 rounded-full border-2 border-dashed border-[#D1D5DB] bg-[#F9FAFB] flex flex-col items-center justify-center gap-1 cursor-default select-none"
+                className="w-24 h-24 rounded-full border-2 border-dashed border-gray-300 dark:border-gray-700 bg-gray-50 dark:bg-gray-800/50 flex flex-col items-center justify-center gap-1 cursor-default select-none"
                 title="Add /public/profile.jpg to show your photo here"
                 aria-label="Profile photo placeholder"
               >
@@ -59,16 +59,17 @@ export default function HomePage() {
                   height={24}
                   viewBox="0 0 24 24"
                   fill="none"
-                  stroke="#9CA3AF"
+                  stroke="currentColor"
                   strokeWidth={1.5}
                   strokeLinecap="round"
                   strokeLinejoin="round"
                   aria-hidden="true"
+                  className="text-gray-400 dark:text-gray-500"
                 >
                   <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" />
                   <circle cx="12" cy="7" r="4" />
                 </svg>
-                <span className="text-[9px] text-[#9CA3AF] font-medium leading-tight text-center px-1">
+                <span className="text-[9px] text-gray-400 dark:text-gray-500 font-medium leading-tight text-center px-1">
                   Add photo
                 </span>
               </div>
@@ -78,19 +79,19 @@ export default function HomePage() {
           {/* Text — RIGHT side */}
           <div className="flex-1 min-w-0">
             <h1
-              className="text-[2.5rem] font-bold text-[#111827] leading-tight mb-4"
+              className="text-[2.5rem] font-bold text-gray-900 dark:text-gray-100 leading-tight mb-4"
               style={{ letterSpacing: "-0.02em" }}
             >
               ML Engineer &amp; AI/ML researcher.
             </h1>
-            <p className="text-[17px] text-[#374151] leading-relaxed max-w-[60ch] mb-0">
+            <p className="text-[17px] text-gray-700 dark:text-gray-300 leading-relaxed max-w-[60ch] mb-0">
               M.Tech student at Manav Rachna, working on adversarial robustness,
               uncertainty estimation, and computer vision. Author of{" "}
-              <span className="font-medium text-[#111827]">
+              <span className="font-medium text-gray-900 dark:text-gray-100">
                 3 IEEE/IJRASET publications
               </span>{" "}
               and a{" "}
-              <span className="font-medium text-[#111827]">
+              <span className="font-medium text-gray-900 dark:text-gray-100">
                 Taylor &amp; Francis book chapter on GANs
               </span>
               . Open to research collaborations and internships.
@@ -110,10 +111,10 @@ export default function HomePage() {
 
       {/* ── 3. Currently Using ───────────────────────────────────────────────── */}
       <section className="mb-16" aria-label="Currently using">
-        <div className="border border-[#E5E7EB] rounded-[8px] overflow-hidden">
+        <div className="border border-gray-200 dark:border-gray-800 rounded-[8px] overflow-hidden">
           {/* Card header */}
-          <div className="flex items-center justify-between px-5 py-3 border-b border-[#E5E7EB] bg-[#F9FAFB]">
-            <h2 className="text-[11px] font-semibold text-[#6B7280] uppercase tracking-widest">
+          <div className="flex items-center justify-between px-5 py-3 border-b border-gray-200 dark:border-gray-800 bg-gray-50 dark:bg-gray-800/50">
+            <h2 className="text-[11px] font-semibold text-gray-500 dark:text-gray-400 uppercase tracking-widest">
               Currently Using
             </h2>
           </div>
@@ -127,7 +128,7 @@ export default function HomePage() {
                 role="listitem"
               >
                 {/* Category label */}
-                <span className="sm:w-32 flex-shrink-0 text-[11px] font-medium text-[#9CA3AF] uppercase tracking-wide leading-relaxed">
+                <span className="sm:w-32 flex-shrink-0 text-[11px] font-medium text-gray-400 dark:text-gray-500 uppercase tracking-wide leading-relaxed">
                   {category}
                 </span>
                 {/* Items */}
@@ -135,7 +136,7 @@ export default function HomePage() {
                   {items.map((item) => (
                     <span
                       key={item}
-                      className="text-[12px] text-[#374151] bg-[#F3F4F6] border border-[#E5E7EB] px-2 py-0.5 rounded-md leading-none"
+                      className="text-[12px] text-gray-700 dark:text-gray-300 bg-gray-100 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 px-2 py-0.5 rounded-md leading-none"
                     >
                       {item}
                     </span>
@@ -159,7 +160,7 @@ export default function HomePage() {
             />
             <Link
               href="/projects"
-              className="text-[14px] text-[#2563EB] hover:text-[#1D4ED8] transition-colors duration-150 flex-shrink-0"
+              className="text-[14px] text-blue-600 hover:text-blue-700 dark:text-blue-400 dark:hover:text-blue-300 transition-colors duration-150 flex-shrink-0"
             >
               All projects →
             </Link>
@@ -183,12 +184,12 @@ export default function HomePage() {
             />
             <Link
               href="/publications"
-              className="text-[14px] text-[#2563EB] hover:text-[#1D4ED8] transition-colors duration-150 flex-shrink-0"
+              className="text-[14px] text-blue-600 hover:text-blue-700 dark:text-blue-400 dark:hover:text-blue-300 transition-colors duration-150 flex-shrink-0"
             >
               All publications →
             </Link>
           </div>
-          <div className="border border-[#E5E7EB] rounded-[8px] px-5 divide-y divide-[#E5E7EB]">
+          <div className="border border-gray-200 dark:border-gray-800 rounded-[8px] px-5 divide-y divide-gray-200 dark:divide-gray-800">
             {recentPublications.map((pub) => (
               <PublicationEntry key={pub.title} publication={pub} />
             ))}
@@ -199,32 +200,32 @@ export default function HomePage() {
       {/* ── 6. Open-Source Experience — supporting evidence, below the fold ──── */}
       <section className="mb-16" aria-label="Open-source experience">
         <div className="flex items-center gap-3 mb-6">
-          <h2 className="text-[11px] font-semibold text-[#6B7280] uppercase tracking-widest whitespace-nowrap">
+          <h2 className="text-[11px] font-semibold text-gray-500 dark:text-gray-400 uppercase tracking-widest whitespace-nowrap">
             Open-Source Experience
           </h2>
-          <div className="flex-1 h-px bg-[#E5E7EB]" aria-hidden="true" />
+          <div className="flex-1 h-px bg-gray-200 dark:bg-gray-800" aria-hidden="true" />
         </div>
 
         <div className="flex flex-col gap-5">
           {resume.openSource.map((item) => (
             <div
               key={item.role}
-              className="flex flex-col sm:flex-row sm:items-start gap-4 pl-5 border-l-2 border-[#E5E7EB]"
+              className="flex flex-col sm:flex-row sm:items-start gap-4 pl-5 border-l-2 border-gray-200 dark:border-gray-800"
             >
               <div className="flex-1 min-w-0">
                 <div className="flex flex-wrap items-baseline gap-x-2 mb-1">
-                  <span className="text-[14px] font-semibold text-[#111827]">
+                  <span className="text-[14px] font-semibold text-gray-900 dark:text-gray-100">
                     {item.role}
                   </span>
-                  <span className="text-[13px] text-[#2563EB] font-medium">
+                  <span className="text-[13px] text-blue-600 dark:text-blue-400 font-medium">
                     {item.org}
                   </span>
                 </div>
-                <p className="text-[13px] text-[#6B7280] leading-relaxed m-0">
+                <p className="text-[13px] text-gray-500 dark:text-gray-400 leading-relaxed m-0">
                   {item.description}
                 </p>
               </div>
-              <span className="text-[12px] text-[#9CA3AF] flex-shrink-0 sm:pt-0.5 tabular-nums whitespace-nowrap">
+              <span className="text-[12px] text-gray-400 dark:text-gray-500 flex-shrink-0 sm:pt-0.5 tabular-nums whitespace-nowrap">
                 {item.period}
               </span>
             </div>
@@ -234,7 +235,7 @@ export default function HomePage() {
 
       {/* ── 7. CTA row ───────────────────────────────────────────────────────── */}
       <section
-        className="flex flex-col sm:flex-row gap-3 pt-8 border-t border-[#E5E7EB]"
+        className="flex flex-col sm:flex-row gap-3 pt-8 border-t border-gray-200 dark:border-gray-800"
         aria-label="Call to action"
       >
         <Button href="/resume" variant="primary" id="cta-resume">

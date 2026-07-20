@@ -12,8 +12,8 @@ export const metadata: Metadata = {
 type Tier = {
   label: string;
   status: Publication["status"];
-  color: string;
-  dot: string;
+  colorClass: string;
+  dotClass: string;
   emptyHint: string;
 };
 
@@ -21,29 +21,29 @@ const TIERS: Tier[] = [
   {
     label: "Published",
     status: "published",
-    color: "#16A34A",
-    dot: "#16A34A",
+    colorClass: "text-green-600 dark:text-green-500",
+    dotClass: "bg-green-600 dark:bg-green-500",
     emptyHint: "No published work yet.",
   },
   {
     label: "Accepted",
     status: "accepted",
-    color: "#2563EB",
-    dot: "#2563EB",
+    colorClass: "text-blue-600 dark:text-blue-500",
+    dotClass: "bg-blue-600 dark:bg-blue-500",
     emptyHint: "No accepted papers at the moment.",
   },
   {
     label: "Under Review",
     status: "in-review",
-    color: "#B45309",
-    dot: "#D97706",
+    colorClass: "text-amber-700 dark:text-amber-500",
+    dotClass: "bg-amber-600 dark:bg-amber-500",
     emptyHint: "Nothing currently under review.",
   },
   {
     label: "In Preparation",
     status: "in-prep",
-    color: "#6B7280",
-    dot: "#9CA3AF",
+    colorClass: "text-gray-600 dark:text-gray-400",
+    dotClass: "bg-gray-400 dark:bg-gray-500",
     emptyHint: "No manuscripts in preparation.",
   },
 ];
@@ -54,7 +54,7 @@ export default function PublicationsPage() {
   return (
     <div className="max-w-4xl mx-auto px-6 py-16 animate-fade-in">
       <h1
-        className="text-[2.5rem] font-bold text-[#111827] leading-tight mb-2"
+        className="text-[2.5rem] font-bold text-gray-900 dark:text-gray-100 leading-tight mb-2"
         style={{ letterSpacing: "-0.02em" }}
       >
         Publications
@@ -68,28 +68,27 @@ export default function PublicationsPage() {
               {/* Tier heading */}
               <div className="flex items-center gap-3 mb-4">
                 <span
-                  className="inline-block w-2 h-2 rounded-full flex-shrink-0"
-                  style={{ backgroundColor: tier.dot }}
+                  className={`inline-block w-2 h-2 rounded-full flex-shrink-0 ${tier.dotClass}`}
                   aria-hidden="true"
                 />
                 <h2
-                  className="text-[13px] font-semibold uppercase tracking-widest"
-                  style={{ color: tier.color, letterSpacing: "0.1em" }}
+                  className={`text-[13px] font-semibold uppercase tracking-widest ${tier.colorClass}`}
+                  style={{ letterSpacing: "0.1em" }}
                 >
                   {tier.label}
                 </h2>
-                <span className="text-[12px] font-medium text-[#9CA3AF] tabular-nums">
+                <span className="text-[12px] font-medium text-gray-400 dark:text-gray-500 tabular-nums">
                   ({pubs.length})
                 </span>
-                <div className="flex-1 h-px bg-[#E5E7EB]" aria-hidden="true" />
+                <div className="flex-1 h-px bg-gray-200 dark:bg-gray-800" aria-hidden="true" />
               </div>
 
               {pubs.length === 0 ? (
-                <p className="text-[13px] text-[#9CA3AF] italic pl-5">
+                <p className="text-[13px] text-gray-400 dark:text-gray-500 italic pl-5">
                   {tier.emptyHint}
                 </p>
               ) : (
-                <div className="border border-[#E5E7EB] rounded-[8px] px-5 divide-y divide-[#E5E7EB]">
+                <div className="border border-gray-200 dark:border-gray-800 rounded-[8px] px-5 divide-y divide-gray-200 dark:divide-gray-800">
                   {pubs.map((pub) => (
                     <PublicationEntry key={pub.title} publication={pub} />
                   ))}

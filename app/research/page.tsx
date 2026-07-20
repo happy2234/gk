@@ -19,7 +19,7 @@ export default function ResearchPage() {
   return (
     <div className="max-w-4xl mx-auto px-6 py-16 animate-fade-in">
       <h1
-        className="text-[2.5rem] font-bold text-[#111827] leading-tight mb-8"
+        className="text-[2.5rem] font-bold text-gray-900 dark:text-gray-100 leading-tight mb-8"
         style={{ letterSpacing: "-0.02em" }}
       >
         Research
@@ -45,14 +45,14 @@ export default function ResearchPage() {
             {research.interests.map((interest) => (
               <div key={interest.area} className="flex gap-4">
                 <div
-                  className="w-1 flex-shrink-0 bg-[#E5E7EB] rounded-full"
+                  className="w-1 flex-shrink-0 bg-gray-200 dark:bg-gray-800 rounded-full"
                   aria-hidden="true"
                 />
                 <div>
-                  <h3 className="text-[15px] font-semibold text-[#111827] mb-1">
+                  <h3 className="text-[15px] font-semibold text-gray-900 dark:text-gray-100 mb-1">
                     {interest.area}
                   </h3>
-                  <p className="text-[14px] text-[#6B7280] leading-relaxed m-0">
+                  <p className="text-[14px] text-gray-500 dark:text-gray-400 leading-relaxed m-0">
                     {interest.description}
                   </p>
                 </div>

@@ -17,41 +17,41 @@ const statusConfig: Record<
 > = {
   // Green = "done / in the world" — deliberate single exception to one-accent rule
   published: {
-    style: "bg-green-50 text-green-700 border-green-200",
+    style: "bg-green-50 text-green-700 border-green-200 dark:bg-green-900/30 dark:text-green-400 dark:border-green-800/50",
     text: "Published",
     Icon: CheckCircle,
   },
   // Blue (#2563EB family) = accepted
   accepted: {
-    style: "bg-blue-50 text-[#2563EB] border-blue-200",
+    style: "bg-blue-50 text-blue-600 border-blue-200 dark:bg-blue-900/30 dark:text-blue-400 dark:border-blue-800/50",
     text: "Accepted",
     Icon: CheckCircle,
   },
   // Amber = under scrutiny / waiting
   "in-review": {
-    style: "bg-amber-50 text-amber-700 border-amber-200",
+    style: "bg-amber-50 text-amber-700 border-amber-200 dark:bg-amber-900/30 dark:text-amber-400 dark:border-amber-800/50",
     text: "In Review",
     Icon: Clock,
   },
   // Gray = draft / not started
   "in-prep": {
-    style: "bg-[#F3F4F6] text-[#6B7280] border-[#E5E7EB]",
+    style: "bg-gray-100 text-gray-500 border-gray-200 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-700",
     text: "In Prep",
     Icon: FileEdit,
   },
   // Blue = active/ongoing — Activity icon reads "in progress", not "done"
   active: {
-    style: "bg-blue-50 text-[#2563EB] border-blue-200",
+    style: "bg-blue-50 text-blue-600 border-blue-200 dark:bg-blue-900/30 dark:text-blue-400 dark:border-blue-800/50",
     text: "Active",
     Icon: Activity,
   },
   archived: {
-    style: "bg-[#F3F4F6] text-[#6B7280] border-[#E5E7EB]",
+    style: "bg-gray-100 text-gray-500 border-gray-200 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-700",
     text: "Archived",
     Icon: Archive,
   },
   paused: {
-    style: "bg-[#F3F4F6] text-[#6B7280] border-[#E5E7EB]",
+    style: "bg-gray-100 text-gray-500 border-gray-200 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-700",
     text: "Paused",
     Icon: PauseCircle,
   },
@@ -80,7 +80,7 @@ export default function Badge({
   // Tag chip — plain text, no icon
   return (
     <span
-      className={`${base} bg-[#F3F4F6] text-[#374151] border-[#E5E7EB] ${className}`}
+      className={`${base} bg-gray-100 text-gray-700 border-gray-200 dark:bg-gray-800 dark:text-gray-300 dark:border-gray-700 ${className}`}
     >
       {label}
     </span>
